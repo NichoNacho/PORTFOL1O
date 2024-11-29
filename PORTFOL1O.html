@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT 9 Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comfortaa', sans-serif;
+            background: url('db.jpg') no-repeat center center/cover; /* Added the image as background */
+            color: white;
+            display: flex;
+            flex-direction: column; /* Changed to column layout for full height */
+            height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #001f3f; /* Dark blue */
+            color: white;
+            position: fixed;
+            top: 0;
+            left: -280px; /* Initially hidden off-screen */
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: left 0.3s ease;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin: 10px 0 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #a3b18a; /* Sage green border */
+            padding-bottom: 10px;
+        }
+
+        .sidebar h3 {
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            color: #a3b18a; /* Sage green */
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            font-size: 1rem;
+            color: white;
+            background: #007a78; /* Sage green (darker tone) */
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        /* Hover Effect */
+        .sidebar a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #a3b18a; /* Sage green underline */
+            transition: 0.4s ease;
+        }
+
+        .sidebar a:hover::before {
+            left: 0;
+            width: 100%;
+        }
+
+        .sidebar a:hover {
+            background: #a3b18a; /* Light sage green */
+            color: #001f3f; /* Dark blue text */
+            transform: scale(1.05);
+        }
+
+        /* Show Sidebar on Hover */
+        .sidebar-container:hover .sidebar {
+            left: 0; /* Slide in sidebar */
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 280px;
+            padding: 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column; /* Ensure content stretches down */
+            justify-content: space-between; /* To fill up the remaining space */
+        }
+
+        .intro {
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            background: url("scenery.jpg") no-repeat center center/cover;
+            background-size: cover;
+            background-position: center bottom;
+            color: white;
+            padding: 80px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 100%; /* Fill available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            color: #d6dbd1;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Custom paragraph with black text */
+        .intro .description {
+            color: black; /* Black text for the description */
+        }
+
+        .intro button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            background: #001f3f; /* Dark blue */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .intro button:hover {
+            background: #a3b18a; /* Sage green hover effect */
+            color: #001f3f;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Container -->
+    <div class="sidebar-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>۶ৎ ICT 9 Portfolio ۶ৎ </h2>
+            <h3> ≽^• ˕ • ྀི≼ 1st Quarter</h3>
+            <a href="quarter-activities.html">Quarter Activities</a>
+            <a href="lessons-applied.html">Lessons Applied</a>
+            <a href="quizzes.html">Quizzes & Periodicals</a>
+            <a href="about-me.html">About Me</a>
+
+            <h3> ૮₍´˶• . • ⑅ ₎ა 2nd Quarter</h3>
+            <a href="videos-photos-audio.html">Videos, Photos, and Audio</a>
+            <a href="browser-outputs.html">Browser Outputs</a>
+            <a href="reflection.html">Reflection</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="intro">
+            <h1>˗ˏˋ ★ ˎˊ˗ Welcome to My Portfolio!˗ˏˋ ★ ˎˊ˗ </h1>
+            <p class="description">
+               <b> Helloo, I am Nicole Nel "Nicho" Dichoson from 9-Family! This is my ICT 9 Portfolio for the school year 24' - 25' !! 
+                Please Navigate to your left for the buttons and content of this portfolio. >ᴗ<♡ </b>				
+            </p>
+            <button onclick="document.querySelector('.intro').style.display='none';">Enter Portfolio</button>
+        </div>
+    </div>
+</body>
+</html>
